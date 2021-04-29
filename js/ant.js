@@ -5,14 +5,26 @@ class Ant {
     this.history = [];
 
     this.update = function () {
-      this.x += random(-3, 3);
-      this.y += random(-3, 3);
+      this.x += random(-10, 10);
+      this.y += random(-10, 10);
 
+      if (this.x > innerWidth) {
+        this.x -= 10;
+      }
+      if (this.x < 0) {
+        this.x += 10;
+      }
+      if (this.y > innerHeight) {
+        this.y -= 10;
+      }
+      if (this.y < 0) {
+        this.y += 10;
+      }
       var v = createVector(this.x, this.y);
       this.history.push(v);
 
       if (this.history.length > 500) {
-        this.history.splice(0, 1);
+        // this.history.splice(0, 1);
       }
     };
 
@@ -23,7 +35,7 @@ class Ant {
 
       for (var i = 0; i < this.history.length; i++) {
         var pos = this.history[i];
-        ellipse(pos.x, pos.y, 2, 2);
+        point(pos.x, pos.y);
       }
     };
   }
