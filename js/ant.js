@@ -31,12 +31,15 @@ class Ant {
     this.show = function() {
       stroke(0);
       fill(0, 150);
-      ellipse(this.x, this.y, 24, 24);
+      ellipse(this.x, this.y, 10, 10);
 
+      noFill()
+      beginShape()
       for (var i = 0; i < this.history.length; i++) {
         var pos = this.history[i];
-        point(pos.x, pos.y);
+        vertex(pos.x, pos.y);
       }
+      endShape()
     };
   }
 }

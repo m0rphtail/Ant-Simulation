@@ -11,7 +11,7 @@ function mousePressed() {
 
 function draw() {
   background(200);
-  strokeWeight(2)
+  strokeWeight(1)
   for (var i = 0; i < ants.length; i++) {
     ants[i].update();
     ants[i].show();
