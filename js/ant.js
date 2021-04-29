@@ -4,7 +4,7 @@ class Ant {
     this.y = y;
     this.history = [];
 
-    this.update = function () {
+    this.update = function() {
       this.x += random(-10, 10);
       this.y += random(-10, 10);
 
@@ -24,11 +24,11 @@ class Ant {
       this.history.push(v);
 
       if (this.history.length > 500) {
-        // this.history.splice(0, 1);
+        this.history.splice(0, 1);
       }
     };
 
-    this.show = function () {
+    this.show = function() {
       stroke(0);
       fill(0, 150);
       ellipse(this.x, this.y, 24, 24);

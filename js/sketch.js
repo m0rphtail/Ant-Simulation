@@ -2,7 +2,7 @@ var ants = [];
 
 function setup() {
   createCanvas(innerWidth, innerHeight);
-  ants.push(new Ant(innerWidth / 2, innerWidth / 2));
+  ants.push(new Ant(innerWidth / 2, innerHeight / 2));
 }
 
 function mousePressed() {
