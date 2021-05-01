@@ -5,8 +5,8 @@ class Ant {
     this.history = [];
 
     this.update = function () {
-      this.x += random(-10, 10);
-      this.y += random(-10, 10);
+      this.x += random(-5, 5);
+      this.y += random(-5, 5);
 
       if (this.x > innerWidth) {
         this.x -= 10;
@@ -23,7 +23,7 @@ class Ant {
       var v = createVector(this.x, this.y);
       this.history.push(v);
 
-      if (this.history.length > 500) {
+      if (this.history.length > 100) {
         this.history.splice(0, 1);
       }
     };
