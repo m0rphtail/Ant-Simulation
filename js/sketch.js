@@ -2,6 +2,7 @@ var ants = [];
 
 function setup() {
   createCanvas(innerWidth, innerHeight);
+  // smooth(2)
   ants.push(new Ant(innerWidth / 2, innerHeight / 2));
 }
 
